@@ -32,6 +32,10 @@ export const App = () => {
   };
 
   function getNewTodoId(todosList: Todo[]): number {
+    if (todosList.length === 0) {
+      return 1;
+    }
+
     const maxId = Math.max(...todosList.map(todo => todo.id));
 
     return maxId + 1;
