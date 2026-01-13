@@ -37,8 +37,8 @@ export const App = () => {
     return maxId + 1;
   }
 
-  function formSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  function formSubmit(event: React.FormEvent) {
+    event.preventDefault();
     clearError();
 
     let hasError = false;
@@ -86,8 +86,8 @@ export const App = () => {
             data-cy="titleInput"
             value={title}
             placeholder="Enter a title"
-            onChange={e => {
-              const nextTitle = e.target.value;
+            onChange={event => {
+              const nextTitle = event.target.value;
 
               setTitle(nextTitle);
 
@@ -103,8 +103,8 @@ export const App = () => {
           <select
             data-cy="userSelect"
             value={user}
-            onChange={e => {
-              const nextUser = +e.target.value;
+            onChange={event => {
+              const nextUser = +event.target.value;
 
               setUser(nextUser);
 
